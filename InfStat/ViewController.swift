@@ -21,7 +21,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var limInferiorTF: UITextField!
     @IBOutlet weak var limSuperiorTF: UITextField!
     
-    
+    var tamanoMuestraR = 0.0
+    var mediaMuestralR = 0.0
+    var desviacionEstandarR = 0.0
+    var coefConfianzaR = 0.0
+    var unoMenosAlphaR = 0.0
+    var alphaMediosR = 0.0
+    var zetaAlphaMediosR = 0.0
+    var limInferiorR = 0.0
+    var limSuperiorR = 0.0
 
     override func viewDidLoad() {
         var tapGestureRecognizer : UITapGestureRecognizer
@@ -53,21 +61,44 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         //Convert text String input to Double for operations
-        if var numbertamanoMuestra = tamanoMuestraTF.text, var tamanoMuestra = Double(numbertamanoMuestra){}
-        if var numbermediaMuestral = mediaMuestralTF.text, var mediaMuestral = Double(numbermediaMuestral){}
-        if var numberdesviacionEstandar = desviacionEstandarTF.text, var desviacionEstandar = Double(numberdesviacionEstandar){}
-        if var numbercoefConfianza = coefConfianzaTF.text, var coefConfianza = Double(numbercoefConfianza){}
-        if var numberunoMenosAlpha = unoMenosAlphaTF.text, var unoMenosAlpha = Double(numberunoMenosAlpha){}
-        if var numberalphaMedios = alphaMediosTF.text, var alphaMedios = Double(numberalphaMedios){}
-        if var numberzetaAlphaMedios = zetaAlphaMediosTF.text, var zetaAlphaMedios = Double(numberzetaAlphaMedios){}
-        if var numberlimInferior = limInferiorTF.text, var limInferior = Double(numberlimInferior){}
-        if var numberlimSuperior = limSuperiorTF.text, var limSuperior = Double(numberlimSuperior){}
+        if var numbertamanoMuestra = tamanoMuestraTF.text, var tamanoMuestra = Double(numbertamanoMuestra){tamanoMuestraR = tamanoMuestra}
+        if var numbermediaMuestral = mediaMuestralTF.text, var mediaMuestral = Double(numbermediaMuestral){mediaMuestralR = mediaMuestral}
+        if var numberdesviacionEstandar = desviacionEstandarTF.text, var desviacionEstandar = Double(numberdesviacionEstandar){desviacionEstandarR = desviacionEstandar}
+        if var numbercoefConfianza = coefConfianzaTF.text, var coefConfianza = Double(numbercoefConfianza){coefConfianzaR = coefConfianza}
+        if var numberunoMenosAlpha = unoMenosAlphaTF.text, var unoMenosAlpha = Double(numberunoMenosAlpha){unoMenosAlphaR = unoMenosAlpha}
+        if var numberalphaMedios = alphaMediosTF.text, var alphaMedios = Double(numberalphaMedios){alphaMediosR = alphaMedios}
+        if var numberzetaAlphaMedios = zetaAlphaMediosTF.text, var zetaAlphaMedios = Double(numberzetaAlphaMedios){zetaAlphaMediosR = zetaAlphaMedios}
+        if var numberlimInferior = limInferiorTF.text, var limInferior = Double(numberlimInferior){limInferiorR = limInferior}
+        if var numberlimSuperior = limSuperiorTF.text, var limSuperior = Double(numberlimSuperior){limSuperiorR = limSuperior}
         //end Convert text String input to Double for operations
     }//end textFieldDidEndEditing
     
     //MARK: Actions
     @IBAction func calcular(_ sender: UIButton) {
-
+        //Make calculations
+        //tamanoMuestraR = tamanoMuestraR
+        //mediaMuestralR = mediaMuestralR
+        //desviacionEstandarR = desviacionEstandarR
+        //coefConfianzaR = coefConfianzaR
+        unoMenosAlphaR = 1-coefConfianzaR
+        alphaMediosR = unoMenosAlphaR/2
+        //zetaAlphaMediosR = zetaAlphaMediosR
+        limInferiorR = mediaMuestralR - zetaAlphaMediosR * (desviacionEstandarR/(tamanoMuestraR.squareRoot()))
+        limSuperiorR = mediaMuestralR + zetaAlphaMediosR * (desviacionEstandarR/(tamanoMuestraR.squareRoot()))
+        //end Make calculations
+        
+        //Display results
+        tamanoMuestraTF.text = String(tamanoMuestraR)
+        mediaMuestralTF.text = String(mediaMuestralR)
+        desviacionEstandarTF.text = String(desviacionEstandarR)
+        coefConfianzaTF.text = String(coefConfianzaR)
+        unoMenosAlphaTF.text = String(unoMenosAlphaR)
+        alphaMediosTF.text = String(alphaMediosR)
+        zetaAlphaMediosTF.text = String(zetaAlphaMediosR)
+        limInferiorTF.text = String(limInferiorR)
+        limSuperiorTF.text = String(limSuperiorR)
+        
+        //end Display results
     }//end calcular
     
     

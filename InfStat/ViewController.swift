@@ -82,7 +82,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         //coefConfianzaR = coefConfianzaR
         unoMenosAlphaR = 1-coefConfianzaR
         alphaMediosR = unoMenosAlphaR/2
-        //zetaAlphaMediosR = zetaAlphaMediosR
+        zetaAlphaMediosR = -1*(Sigma.normalQuantile(p: alphaMediosR)!)
         limInferiorR = mediaMuestralR - zetaAlphaMediosR * (desviacionEstandarR/(tamanoMuestraR.squareRoot()))
         limSuperiorR = mediaMuestralR + zetaAlphaMediosR * (desviacionEstandarR/(tamanoMuestraR.squareRoot()))
         //end Make calculations

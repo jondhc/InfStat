@@ -12,6 +12,7 @@
 		09DAF2D81FC3F4880059EDC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DAF2D61FC3F4880059EDC7 /* Main.storyboard */; };
 		09DAF2DA1FC3F4880059EDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09DAF2D91FC3F4880059EDC7 /* Assets.xcassets */; };
 		09DAF2DD1FC3F4880059EDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09DAF2DB1FC3F4880059EDC7 /* LaunchScreen.storyboard */; };
+		09DAF2E51FC43B5B0059EDC7 /* SigmaDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DAF2E41FC43B5B0059EDC7 /* SigmaDistrib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		09DAF2D91FC3F4880059EDC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09DAF2DC1FC3F4880059EDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09DAF2DE1FC3F4880059EDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09DAF2E41FC43B5B0059EDC7 /* SigmaDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SigmaDistrib.swift; path = "../../../../../Downloads/SigmaSwiftStatistics-master/Distrib/SigmaDistrib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		09DAF2D11FC3F4880059EDC7 /* InfStat */ = {
 			isa = PBXGroup;
 			children = (
+				09DAF2E41FC43B5B0059EDC7 /* SigmaDistrib.swift */,
 				09DAF2D21FC3F4880059EDC7 /* AppDelegate.swift */,
 				09DAF2D41FC3F4880059EDC7 /* ViewController.swift */,
 				09DAF2D61FC3F4880059EDC7 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DAF2E51FC43B5B0059EDC7 /* SigmaDistrib.swift in Sources */,
 				09DAF2D51FC3F4880059EDC7 /* ViewController.swift in Sources */,
 				09DAF2D31FC3F4880059EDC7 /* AppDelegate.swift in Sources */,
 			);
@@ -277,6 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VM8XV6N62U;
 				INFOPLIST_FILE = InfStat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jondhc.InfStat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VM8XV6N62U;
 				INFOPLIST_FILE = InfStat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jondhc.InfStat;
 				PRODUCT_NAME = "$(TARGET_NAME)";

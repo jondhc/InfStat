@@ -202,6 +202,9 @@
                                                 <rect key="frame" x="0.0" y="483" width="343" height="30"/>
                                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Calcular"/>
+                                                <connections>
+                                                    <action selector="calcular:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJK-ko-j1i"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -224,6 +227,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="alphaMediosTF" destination="235-Hy-BSF" id="Iqf-Ft-OwE"/>
+                        <outlet property="coefConfianzaTF" destination="tIL-aO-fJH" id="Ckm-Yz-ibA"/>
+                        <outlet property="desviacionEstandarTF" destination="tpd-bT-ccc" id="bbC-6x-I2T"/>
+                        <outlet property="limInferiorTF" destination="ZCJ-8h-pdb" id="nL0-ag-SS8"/>
+                        <outlet property="limSuperiorTF" destination="mXK-sG-MBp" id="xem-NF-8oq"/>
+                        <outlet property="mediaMuestralTF" destination="nFE-gF-2EH" id="Oq6-Zs-9ol"/>
+                        <outlet property="tamanoMuestraTF" destination="slL-kq-cSd" id="mnV-MM-Bdp"/>
+                        <outlet property="unoMenosAlphaTF" destination="jYZ-5I-NHE" id="9Za-61-6cv"/>
+                        <outlet property="zetaAlphaMediosTF" destination="fGB-vo-fNr" id="ahb-Dg-YZs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
